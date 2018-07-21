@@ -1,0 +1,162 @@
+
+body{
+	background: #226666;
+}
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	font-weight: bold;
+}
+
+.robots {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.head,
+.left_leg, 
+.right_leg, 
+.torso{
+	background: #A6A938;
+}
+.left_arm,
+.right_arm 
+ {
+	 background-color: #9F3548;
+}
+
+.head { 
+	display:flex;
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+} 
+
+.eyes {
+	display:flex;	
+}
+
+.android:hover .head {
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body { 
+	width: 300px; 
+	height: 150px;
+	display: flex; 
+} 
+
+.left_arm, .right_arm { 
+	width: 40px; 
+	height: 125px;
+	border-radius: 100px; 
+
+} 
+
+.left_arm { 
+	margin-right: 10px; 
+} 
+
+.right_arm { 
+	margin-left: 10px; 
+} 
+.android:hover .left_arm{
+	transform:skew(-40deg);
+}
+.android:hover .right_arm {
+	transform:skew(40deg);
+}
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+	transition: all 1s;
+} 
+.upper_body:hover .torso{
+	transform:rotate(360deg);
+}
+.lower_body { 
+	display:flex;
+	width: 200px; 
+	height: 200px;
+	/* This is another useful property. 
+	Hmm what do you think it does?*/
+	margin:0 auto;
+	/*0 is for top-bottom and auto for left-right. 
+	It means that left and right margin will take
+	 auto margin according to the width of the element
+	  and the width of the container.*/
+	  /*example, if the parent is 100px and the child is 50px, 
+	  then the auto property will determine that there's 50px 
+	  of free space to share between margin-left and 
+	  margin-right*/
+	  /*Which would give:
+margin-left:25;
+margin-right:25;*/
+
+} 
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+} 
+
+.android:hover .left_leg{
+	-webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    transform: rotate(40deg);
+}
+
+.right_leg { 
+	margin-left: 30px; 
+}
+.android:hover .right_leg{
+	transform:rotate(-40deg);
+}
+
+.left_eye, .right_eye { 
+	width: 22px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: brown; 
+} 
+
+.left_eye { 
+	/* These properties are new and you haven't encountered
+	in this course. Check out CSS Tricks to see what it does! */
+	position: relative; 
+	top: 100px; 
+	left: 40px;
+	
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 100px; 
+	left: 120px; 
+}
+.left_eyeball, .right_eyeball { 
+	width: 10px; 
+	height: 10px; 
+	border-radius: 16px; 
+	background-color: black; 
+  position: relative;
+  margin: 5px;
+} 
+.android:hover .left_eyeball, .android:hover .right_eyeball{
+	transform:scale(1.5);
+}
+
+
